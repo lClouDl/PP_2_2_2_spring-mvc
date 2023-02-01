@@ -1,4 +1,4 @@
-package web.DAO;
+package web.dao;
 
 import org.springframework.stereotype.Repository;
 import web.model.Car;
@@ -9,7 +9,7 @@ import java.util.List;
 @Repository
 public class CarDaoImp implements CarDao {
 
-    private static List<Car> listCar = new ArrayList<>();
+    private final static List<Car> listCar = new ArrayList<>();
 
     static {
         listCar.add(new Car("Subaru", 2022, "white"));
@@ -29,6 +29,6 @@ public class CarDaoImp implements CarDao {
 
     @Override
     public List<Car> getListCar(Integer quantity) {
-        return (quantity != null && quantity < this.listCar.size()) ? this.listCar.subList(0, quantity) : this.listCar;
+        return (quantity != null && quantity < listCar.size()) ? listCar.subList(0, quantity) : listCar;
     }
 }

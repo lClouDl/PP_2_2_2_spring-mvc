@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
-<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Car table</title>
 </head>
 <body>
-<center>
+<div style="text-align: center;">
     <table border="1">
         <thead>
         <tr>
@@ -19,17 +18,17 @@
         <tbody>
         <tr th:each="car : ${listCar}">
             <td>
-                <center><span th:text="${car.getModel()}"> Model </span></center>
+                <div style="text-align: center;"><span th:text="${car.getModel()}"> Model </span></div>
             </td>
             <td>
-                <center><span th:text="${car.getYearOfRelease()}"> Age Of Release </span></center>
+                <div style="text-align: center;"><span th:text="${car.getYearOfRelease()}"> Age Of Release </span></div>
             </td>
             <td>
-                <center><span th:text="${car.getColour()}"> Colour </span></center>
+                <div style="text-align: center;"><span th:text="${car.getColour()}"> Colour </span></div>
             </td>
         </tr>
         </tbody>
     </table>
-</center>
+</div>
 </body>
 </html>
